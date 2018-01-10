@@ -1,0 +1,142 @@
+.calendar{
+	width: 100%;
+	max-width: 800px;
+	clear: both;
+}
+
+.calendar_day{
+	padding: 10px 0;
+}
+
+.calendar_day:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.calendar_day label, .calendar_day:before,.calendar_weekheader i{
+	display: block;
+	float: left;
+	width:14.285%;
+	font-style: normal;
+	text-align: center;
+}
+
+.calendar_day label.active{
+	background: #089d95;
+	color: #fff;
+}
+
+.calendar_day label.disabled{
+	color: #c3c3c3;
+}
+
+
+
+.calendar_day label, .calendar_day:before{
+	line-height: 40px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: 0;
+}
+.calendar_day label:hover{
+	font-size: 120%;
+}
+
+.calendar_day label input{
+	display: none;
+}
+
+.calendar_weekheader{
+	font-weight: bold;
+	font-size: 80%;
+}
+
+.calendar_weekheader:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.calendar_weekheader i{
+	height: 26px;
+	line-height: 26px;
+	color: #089d95;
+}
+
+.calendar_monthhead{
+	font-size: 110%;
+	line-height: 30px;
+	text-align: center;
+	padding: 10px;
+}
+.calendar_monthhead b{
+	font-size: 130%;
+}
+
+.calendar_monthhead .fa{
+	display: block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border-radius: 30px;
+}
+.calendar_monthhead .fa:hover{
+	background: #EFEFEF;
+}
+
+.calendar_monthhead .fa-angle-left{float: left;}
+.calendar_monthhead .fa-angle-double-left{float: left;}
+.calendar_monthhead .fa-angle-right{float: right;}
+.calendar_monthhead .fa-angle-double-right{float: right;}
+
+.calendar[date-m="1"] .calendar_monthhead b:before{content: "Январь";}
+.calendar[date-m="2"] .calendar_monthhead b:before{content: "Февраль";}
+.calendar[date-m="3"] .calendar_monthhead b:before{content: "Март";}
+.calendar[date-m="4"] .calendar_monthhead b:before{content: "Апрель";}
+.calendar[date-m="5"] .calendar_monthhead b:before{content: "Май";}
+.calendar[date-m="6"] .calendar_monthhead b:before{content: "Июнь";}
+.calendar[date-m="7"] .calendar_monthhead b:before{content: "Июль";}
+.calendar[date-m="8"] .calendar_monthhead b:before{content: "Август";}
+.calendar[date-m="9"] .calendar_monthhead b:before{content: "Сентябрь";}
+.calendar[date-m="10"] .calendar_monthhead b:before{content: "Октябрь";}
+.calendar[date-m="11"] .calendar_monthhead b:before{content: "Ноябрь";}
+.calendar[date-m="12"] .calendar_monthhead b:before{content: "Декабрь";}
+
+.calendar[date-m="2"] .calendar_day label:nth-child(n+31),
+.calendar[date-m="6"] .calendar_day label:nth-child(n+31),
+.calendar[date-m="9"] .calendar_day label:nth-child(n+31),
+.calendar[date-m="11"] .calendar_day label:nth-child(n+31)
+{display: none;}
+
+
+.calendar[date-m="2"] .calendar_day label:nth-child(n+29)
+{display: none;}
+
+.calendar[date-m="2"][date-y="1980"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="1984"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="1988"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="1992"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="1996"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2000"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2004"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2008"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2012"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2016"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2020"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2024"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2028"] .calendar_day label:nth-child(29),
+.calendar[date-m="2"][date-y="2032"] .calendar_day label:nth-child(29)
+{display: block;}
+
+.calendar[date-f="2"] .calendar_day:before{content: ""; width: 14.285%;}
+.calendar[date-f="3"] .calendar_day:before{content: ""; width: 28.571%;}
+.calendar[date-f="4"] .calendar_day:before{content: ""; width: 42.857%;}
+.calendar[date-f="5"] .calendar_day:before{content: ""; width: 57.142%;}
+.calendar[date-f="6"] .calendar_day:before{content: ""; width: 71.428%;}
+.calendar[date-f="7"] .calendar_day:before{content: ""; width: 85.714%;}
+
